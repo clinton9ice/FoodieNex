@@ -1,0 +1,116 @@
+// @import "./variables";
+
+.highlight {
+    border-bottom: 1px solid $gray;
+    .social-links {
+        .social-link {
+            font-size: 1em;
+            border: 1px solid $white;
+            border-radius: 50% !important;
+            margin-left: 0.6rem;
+            -webkit-border-radius: 50% !important;
+            -moz-border-radius: 50% !important;
+            -ms-border-radius: 50% !important;
+            -o-border-radius: 50% !important;
+
+            &.btn-sm {
+                width: 30px;
+                height: 30px;
+                padding: 0.15rem;
+            }
+        }
+    }
+}
+.navbar {
+    padding: 0.5rem 0.8rem !important;
+}
+
+.navbar-custom {
+    padding: 10px 10px 10px 40px;
+    align-items: center;
+    margin-left: auto;
+    
+    .nav-item {
+        margin: 0 10px;
+        position: relative;
+
+        & > .nav-link {
+            color: $white;
+            font-size: 0.8em;
+            position: relative;
+            transition: all 0.3s;
+            &:hover {
+                color: $yellow !important;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: $yellow;
+            left: 0px;
+            bottom: 0;
+            transition: all 0.3s;
+        }
+     
+
+        &:last-child {
+            margin: 0;
+        }
+
+
+        &.active::before, &.active .nav-link, .nav-link:focus {
+            color: $yellow;
+            width: 100%;
+        }
+      
+    }
+}
+
+.dropdown-menu{
+    background-color: $white;
+    padding: 0;
+
+    .dropdown-item {
+        transition: all 0.3s;
+        font-size: 0.8em;
+        padding: 0.8rem;
+        &:hover {
+            background: lighten($gray, 65%);
+            color: $yellow !important;
+        }
+    }
+
+}
+
+
+
+
+.last-menu-bg {
+    background-color: $primaryColor;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding:3px 20px;
+    box-shadow: $primary-shadow;
+    transition: 200ms ease;
+    &:hover{
+        background-color: transparent;
+        border-color: $primaryColor;
+        a{ color: $primaryColor !important;}
+     }
+}
+
+.navbar-light .navbar-toggler {
+    color: $primaryColor;
+    border-color: $primaryColor;
+    outline: 0;
+    padding: 0.35rem 0.75rem;
+
+    &:hover,
+    &:focus {
+        color: $primaryColor;
+        border-color: $primaryColor;
+    }
+}

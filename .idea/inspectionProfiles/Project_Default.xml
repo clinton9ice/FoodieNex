@@ -1,0 +1,22 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="8">
+            <item index="0" class="java.lang.String" itemvalue="app-name" />
+            <item index="1" class="java.lang.String" itemvalue="app-time-state" />
+            <item index="2" class="java.lang.String" itemvalue="app-section" />
+            <item index="3" class="java.lang.String" itemvalue="app-button" />
+            <item index="4" class="java.lang.String" itemvalue="app-timer" />
+            <item index="5" class="java.lang.String" itemvalue="app-comment" />
+            <item index="6" class="java.lang.String" itemvalue="app-section-column" />
+            <item index="7" class="java.lang.String" itemvalue="app-content" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+  </profile>
+</component>
