@@ -1,6 +1,6 @@
 Options -Indexes
 
-ErrorDocument 404 http://localhost/foodieNex/error.php?code=404
+ErrorDocument 404 https://foodienex.herokuapp.com/error.php?code=404
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
