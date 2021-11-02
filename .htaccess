@@ -1,6 +1,10 @@
 Options -Indexes
 
 ErrorDocument 404 https://foodienex.herokuapp.com/error.php?code=404
+<<<<<<< HEAD
+=======
+
+>>>>>>> 90741d0c149f7f5d5c4424e57b871f9ff4c8d653
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
