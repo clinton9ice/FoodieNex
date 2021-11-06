@@ -2,9 +2,12 @@
 $path = pathinfo($_SERVER['REQUEST_URI']);
 $pageName= explode("?", $path["basename"])[0];
 ?>
-<ul>
-    <li><a href="<?= './'?>">Home</a><i class="icofont-double-right"></i></li>
-    <li>
+    <nav aria-label="breadcrumb">
+<ul class="breadcrumb bg-transparent">
+    <li class="breadcrumb-item"><a href="<?= './'?>">Home</a>
+    <li class="breadcrumb-item active">
         <a href="#"><span><?= $pageName?></span></a>
     </li>
 </ul>
+
+</nav>

@@ -1,8 +1,9 @@
 @import "./breakpoints";
+@import "./variables";
 
 @include respond-to("normal") {
     .navbar-custom {
-
+        background-color: $dark;
         .nav-item {
             width: 100%;
 
@@ -158,6 +159,14 @@
             max-width: 320px;
         }
     }
+
+    .form-section{
+        .advert-container{
+            .caption{
+                font-size:  2em !important;
+            }
+        }
+    }
 }
 
 @include respond-to("small") {
@@ -184,12 +193,39 @@
             display: none;
         }
     }
+
     .blog-details {
         .comment-section {
             .response {
                 margin-left: 20px;
             }
         }
+    }
+    .form-section{
+        padding-top: 3rem;
+        height: 100%;
+        overflow: visible;
+      
+        .advert-container{
+            display: none;
+        }
+        .form-container{
+            max-height: 100%;
+            overflow: visible;
+            .form-group{
+                padding: 0;
+                .label{
+                    left: 0.7rem;
+                }
+            }
+            .form-caption{
+                font-size: 1.5em;
+            }
+        }
+        .submit-btn{
+            max-width: 250px;
+        }
+
     }
 
     footer.footer {

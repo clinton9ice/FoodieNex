@@ -1,7 +1,11 @@
 <div id="top-btn" app-button="scroll-top">
-    <button class="btn top-btn"><i class="icofont-arrow-up"></i></button>
+
+    <button class="btn top-btn">
+        <i class=" ri-arrow-up-s-line"></i>
+    </button>
+
 </div>
-<!---------------------->
+
 <header>
     <div class="header">
         <div class="highlight d-flex align-items-center flex-wrap justify-content-between p-2">
@@ -30,12 +34,11 @@
             <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <a class="navbar-brand mr-3" href="<?= "./"?>">
                     <h3 class="logo">
-                        <span class="text-white">FoodieNex</span>
-                        <!-- <img src="img/logo.png" class="w-100 img-fluid" alt="" /> -->
+                        <img src="./src/img/icons/logo.svg" class="w-100 img-fluid" alt="" />
                     </h3>
                 </a>
 
-                <div class="open-time ml-5 desktop-off">
+                <div class="open-time ml-2 pt-3 desktop-off">
                     <h6 class="text-danger" app-time-state>
                         <i class="icofont-clock-time"></i>
                         <span></span>
@@ -62,8 +65,8 @@
                             Categories
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#" data-null>Recipe List</a>
-                            <a class="dropdown-item" href="#" data-null="">Food Menu</a>
+                            <a class="dropdown-item" href="#" app-button="null" data-message="Page is still not ready">Recipe List</a>
+                            <a class="dropdown-item" href="#" app-button="null" data-message="Page is still not ready">Food Menu</a>
                             <a class="dropdown-item" href="blog" data-null>Blog</a>
                         </div>
                     </li>
@@ -79,12 +82,12 @@
 
                     <li class="nav-item rg-btn">
                             <span class="nav-link">
-                                <a class="text-white" href="#">Register</a>
+                                <a class="text-white" href="register">Register</a>
                             </span>
                     </li>
 
                     <li class="nav-item last-menu-bg">
-                        <span class="nav-link"><a href="#">Login</a></span>
+                        <span class="nav-link"><a href="login">Login</a></span>
                     </li>
 
                 </ul>

@@ -18,11 +18,11 @@
     font-size: 16px;
 }
 .menu-btn:hover {
-    color: #ff702a;
-    border-color: #ff702a !important;
+    color: $orange;
+    border-color: $orange !important;
 }
 .menu-btn:hover a {
-    color: #ff702a;
+    color: $orange;
 }
 
 .menu-btn::after {
@@ -59,25 +59,27 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 12px;
-    color: #fff;
-    background: linear-gradient(to right, #f65f26, #d41c18);
-    z-index: 9999999;
+    color: $white;
+    background: $orange;
+    z-index: 200;
     transition: all 0.3s;
     border: none;
     display: none;
-}
-.top-btn:hover {
-    color: #0a0626;
-}
-.top-btn:focus {
-    border: none;
-    box-shadow: none;
-    color: #fff;
-}
-.top-btn i {
-    font-size: 22px;
-    text-align: center;
+    &:hover {
+        color: darken($white, 5%);
+        background-color: darken($orange, 5%);
+    }
+    &:focus {
+        border: none;
+        box-shadow: none;
+        color: darken($white, 10%);
+    }
+
+    i {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
 }
 
 /*======Custom-btn========*/

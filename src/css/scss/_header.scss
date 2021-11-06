@@ -1,4 +1,4 @@
-/* Bubble CSS*/
+
 header {
     position: absolute;
     width: 100%;
@@ -8,19 +8,12 @@ header {
     background: rgba(0, 0, 0, 0.22);
 }
 
-.bubble {
-    position: absolute;
-    width: 220px;
-    bottom: 0%;
-    left: 10%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+.logo {
+    width: 70px;
 }
 
-/* HEADER PART CSS START */
+
+/* HEADER */
 .header {
     position: absolute;
     width: 100%;
@@ -75,9 +68,7 @@ header {
         .timer{color: $dark !important;}
     }
 
-    .logo {
-        width: 100px;
-    }
+
     
     .open-time {
         h6,span{

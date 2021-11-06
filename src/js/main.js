@@ -1,5 +1,6 @@
 !(function (e) {
-    let body = $("body"), app = body.attr("app-name");
+    let body = $("body"),
+        app = body.attr("app-name");
 
     (function preloader() {
         var el = `<div class="loader-container" app-loader="active">
@@ -21,13 +22,33 @@
                 e("[app-loader]").fadeOut(500);
                 body.addClass("flow");
             }
-        }, 500);
+        }, 100);
     });
 
     $(document).ready(function () {
-        $(".top-btn").click(function () {
-            $("html").animate({scrollTop: 0}, 1000);
+
+        $("[app-button]").click(function (e) {
+            $this = $(this).attr("app-button");
+            e.preventDefault();
+
+            switch ($this) {
+                case "scroll-top":
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 1000);
+                    break;
+                    case "null":
+                        let errorMessage = $(this).attr("data-message");
+                       var errorReport = errorMessage !== undefined? errorMessage : "Not available";
+                        swal({
+                            icon: "error",
+                            title: errorMessage
+                        });
+                        break;
+            }
+
         });
+
         $(".menu-btn a").on("click", function () {
             if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -42,6 +63,7 @@
                 }
             }
         });
+
         $(window).scroll(function () {
             var scroll = $(this).scrollTop();
             //Toggle nav
@@ -118,13 +140,13 @@
                 prevArrow: '<i class="icofont-arrow-left arrows left-arrow"></i>',
                 nextArrow: '<i class="icofont-arrow-right arrows right-arrow"></i>',
                 responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        },
                     },
-                },
                     {
                         breakpoint: 600,
                         settings: {
@@ -157,4 +179,3 @@
     });
 
 })(jQuery);
-

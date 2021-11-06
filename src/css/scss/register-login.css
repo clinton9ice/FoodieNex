@@ -1,0 +1,17 @@
+.fixed-height {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.register-container {
+  position: relative;
+}
+
+.register-container .advert-container > .body {
+  height: 100vh;
+}
+
+.register-container .form-container {
+  overflow-y: auto;
+}
+/*# sourceMappingURL=register-login.css.map */

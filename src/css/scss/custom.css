@@ -392,12 +392,12 @@ button:hover {
 }
 
 .menu-btn:hover {
-  color: #ff702a;
-  border-color: #ff702a !important;
+  color: #ef5125;
+  border-color: #ef5125 !important;
 }
 
 .menu-btn:hover a {
-  color: #ff702a;
+  color: #ef5125;
 }
 
 .menu-btn::after {
@@ -436,11 +436,9 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 12px;
-  color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#f65f26), to(#d41c18));
-  background: linear-gradient(to right, #f65f26, #d41c18);
-  z-index: 9999999;
+  color: white;
+  background: #ef5125;
+  z-index: 200;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
@@ -448,18 +446,19 @@ button:hover {
 }
 
 .top-btn:hover {
-  color: #0a0626;
+  color: #f2f2f2;
+  background-color: #e84011;
 }
 
 .top-btn:focus {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #fff;
+  color: #e6e6e6;
 }
 
 .top-btn i {
-  font-size: 22px;
+  font-size: 1.3em;
   text-align: center;
 }
 
@@ -490,7 +489,141 @@ button:hover {
   color: white;
 }
 
-/* Bubble CSS*/
+.fixed-height {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.form-section {
+  position: relative;
+}
+
+.form-section .advert-container {
+  background: url("../../img/cakes/03.jpg") center no-repeat;
+}
+
+.form-section .advert-container .body {
+  height: 100%;
+}
+
+.form-section .advert-container .body .caption {
+  font-size: 2.5em;
+  font-family: "Poppins-bold";
+  line-height: 50px;
+  color: white;
+}
+
+.form-section .advert-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000091;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.form-section .form-container {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.form-section .form-container .form-caption {
+  font-size: 2em;
+  font-family: "Poppins-bold";
+  margin-bottom: 0.5rem;
+}
+
+.form-section .form-container .form-info {
+  font-size: 0.87em;
+}
+
+.form-section .form-container .form-group {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.form-section .form-container .form-group .label {
+  position: absolute;
+  left: 1.7rem;
+  font-size: 0.9em;
+  bottom: 0;
+  pointer-events: none;
+  color: #060316;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.form-section .form-container .form-group .form-control {
+  font-size: 0.876em;
+  font-family: "poppins", sans-serif;
+  height: 42px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.form-section .form-container .form-group .form-control:focus + .label,
+.form-section .form-container .form-group .form-control:valid + .label {
+  -webkit-transform: translateY(-44px);
+          transform: translateY(-44px);
+  font-size: 0.8em;
+  color: #4d4d4d;
+}
+
+.form-section .form-container .submit-btn {
+  background: #ef5125;
+  border: 1px solid transparent;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  color: white;
+  font-size: 0.87em;
+}
+
+.form-section .form-container .submit-btn:hover {
+  -webkit-box-shadow: 0px 12px 12px #f65f2633;
+          box-shadow: 0px 12px 12px #f65f2633;
+}
+
+.form-section.login .advert-container {
+  background-image: url("../../img/cakes/02.jpg");
+}
+
+.form-section.login .fieldset {
+  margin-top: 4rem !important;
+}
+
+.form-section.login .social-btn-list .btn-icon {
+  display: inline-block;
+  border: 1px solid #cccccc;
+  vertical-align: middle;
+  min-width: 180px;
+  border-radius: 6px;
+  padding: 0.3rem 1rem 0.3rem 0.3rem;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  margin: 0.3rem;
+  font-size: 0.78em;
+  color: #060316;
+}
+
+.form-section.login .social-btn-list .btn-icon:hover {
+  color: white;
+}
+
+.form-section.login .social-btn-list .btn-icon:hover.g {
+  background-color: #d13a10;
+}
+
+.form-section.login .social-btn-list .btn-icon:hover.f {
+  background-color: #3c2bda;
+}
+
+.form-section.login .social-btn-list .btn-icon:hover .btn {
+  background-color: transparent;
+  border-color: transparent;
+}
+
 header {
   position: absolute;
   width: 100%;
@@ -500,19 +633,11 @@ header {
   background: rgba(0, 0, 0, 0.22);
 }
 
-.bubble {
-  position: absolute;
-  width: 220px;
-  bottom: 0%;
-  left: 10%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+.logo {
+  width: 70px;
 }
 
-/* HEADER PART CSS START */
+/* HEADER */
 .header {
   position: absolute;
   width: 100%;
@@ -564,10 +689,6 @@ header {
 
 .header.sticky .timer {
   color: #060316 !important;
-}
-
-.header .logo {
-  width: 100px;
 }
 
 .header .open-time h6, .header .open-time span {
@@ -670,12 +791,12 @@ header {
 }
 
 .special-section .donut-icon {
-  width: 60px;
+  width: 70px;
   padding: 15px;
   background: white;
   border-radius: 10px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
 }
 
 .special-section .offer-info {
@@ -934,7 +1055,7 @@ header {
 }
 
 .customer-section .customer-head {
-  max-width: 500px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -1034,7 +1155,7 @@ header {
 
 /*=============*/
 .service-section {
-  background-color: #f0633d;
+  background-color: #ef5125;
   padding: 0 40px;
   position: relative;
   z-index: 1;
@@ -1075,9 +1196,15 @@ header {
   border-radius: 50%;
   height: 70px;
   width: 70px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .service-section .image-text {
@@ -1086,11 +1213,6 @@ header {
 }
 
 /*=====page====*/
-.about {
-  /* CHEFS SECTION */
-  /*=====/========*/
-}
-
 .about .container {
   max-width: 1500px;
   padding: 1rem;
@@ -1204,16 +1326,26 @@ header {
 
 .social-icon-list {
   margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
 }
 
 .social-icon-list .list-icon {
-  display: inline-block;
+  background: #efedfc;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 40px;
   height: 40px;
-  background: #efedfc;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 4px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -1774,12 +1906,6 @@ header {
 }
 
 /* Footer*/
-.footer {
-  /*===============*/
-  /*========FOOTER BOTTOM =====*/
-  /*===============*/
-}
-
 .footer .footer-top {
   margin: 2rem auto;
 }
@@ -1834,7 +1960,6 @@ header {
 }
 
 .footer .opening-hours {
-  background: #fff5e6;
   border-radius: 10px;
 }
 
